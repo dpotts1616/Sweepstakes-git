@@ -9,15 +9,15 @@ namespace Sweepstakes
     class Simulation
     {
         //member variables
-        MarketingFirm stackFirm = new MarketingFirm(new SweepstakesStackManager());
-        MarketingFirm queueFirm = new MarketingFirm(new SweepstakesQueueManger());
+        MarketingFirmFactory factory = new MarketingFirmFactory();
 
         //constructor
 
         //methods
         public void RunSimulation()
         {
-
+            int firmChoice = UserInterface.ChooseSweepstakeManagementType();
+            MarketingFirm firm = factory.CreateAFirm(firmChoice);
 
         }
 

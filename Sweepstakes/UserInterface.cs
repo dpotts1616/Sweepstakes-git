@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class UserInterface
+    public static class UserInterface
     {
+        //member variables
+
+        //constructor
+
+        //methods
+        public static string GetUserInputFor(string prompt)
+        {
+            Console.WriteLine(prompt);
+            return Console.ReadLine();
+        }
+       
     }
 }

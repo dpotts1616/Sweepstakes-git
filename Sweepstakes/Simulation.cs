@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Class1
+    class Simulation
     {
+        //member variables
+        MarketingFirm stackFirm = new MarketingFirm(new SweepstakesStackManager());
+        MarketingFirm queueFirm = new MarketingFirm(new SweepstakesQueueManger());
+
+        //constructor
+
+        //methods
+        public void RunSimulation()
+        {
+
+
+        }
+
     }
 }

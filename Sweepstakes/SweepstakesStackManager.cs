@@ -13,6 +13,10 @@ namespace Sweepstakes
 
 
         //constructor
+        public SweepstakesStackManager()
+        {
+            stack = new Stack<Sweepstakes>();
+        }
 
         //methods
 

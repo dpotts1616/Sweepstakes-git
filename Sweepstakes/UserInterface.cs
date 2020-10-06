@@ -22,7 +22,7 @@ namespace Sweepstakes
         public static int ChooseSweepstakeManagementType()
         {
             int managementType = 0;
-            Console.WriteLine("Welcome, what type of sweepstakes would your firm like to manage?");
+            Console.WriteLine("Welcome, how does your firm manage sweepstakes?");
             Console.WriteLine("1) Stack Management");
             Console.WriteLine("2) Queue Management");
             bool valid = false;
@@ -37,6 +37,15 @@ namespace Sweepstakes
             }
             return managementType;
         }
-       
+
+        public static void Print(string input)
+        {
+            Console.WriteLine(input);
+        }
+
+        public static void Print(int input)
+        {
+            Console.WriteLine(input);
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class MarketingFirm
+    class MarketingFirm
     {
         //member variables
         ISweepstakesManager _manager;
@@ -20,7 +20,7 @@ namespace Sweepstakes
         //methods
         public void CreateSweepstakes()
         {
-
+            _manager.InsertSweepstakes(new Sweepstakes(UserInterface.GetUserInputFor("What is the name of your Sweepstakes?")));
         }
     }
 }

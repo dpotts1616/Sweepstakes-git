@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public class MarketingFirmFactory : ICreateFirms
+    class MarketingFirmFactory : ICreateFirms
     {
         public MarketingFirm CreateAFirm(int choice)
         {

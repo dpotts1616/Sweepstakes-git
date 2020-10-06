@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant
+    class Contestant : INotifier
     {
         //member variables
         public string firstName;
@@ -23,6 +23,13 @@ namespace Sweepstakes
             registrationNumber = new Random().Next();
         }
 
+
         //methods
+
+        public void Notify(Contestant contestant)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

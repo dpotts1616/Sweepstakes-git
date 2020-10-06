@@ -12,6 +12,10 @@ namespace Sweepstakes
         ISweepstakesManager _manager;
 
         //constructor
+
+        //dependency injection of a Sweepstakes manager into my Marketing firm
+        //forces me to create a Marketing firm with the ability to manage sweepstakes
+        //but allows different types of sweepstakes management
         public MarketingFirm(ISweepstakesManager manager)
         {
             _manager = manager;

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Contestant.cs" />
     <Compile Include="ICreateFirms.cs" />
+    <Compile Include="INotifier.cs" />
     <Compile Include="ISweepstakesManager.cs" />
     <Compile Include="MarketingFirm.cs" />
     <Compile Include="MarketingFirmFactory.cs" />

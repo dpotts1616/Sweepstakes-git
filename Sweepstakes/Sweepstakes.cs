@@ -36,6 +36,7 @@ namespace Sweepstakes
         {
             List<int> keys = new List<int>(contestants.Keys);
             int winner = Program.GetRandomNumber(0, keys.Count);
+            contestants[keys[winner]] = ChangeToWinner(contestants[keys[winner]]);
             return contestants[keys[winner]];
         }
 
@@ -46,6 +47,20 @@ namespace Sweepstakes
             UserInterface.Print(contestant.lastName);
             UserInterface.Print(contestant.eMailAddress);
             UserInterface.Print(contestant.registrationNumber);
+        }
+
+        public Contestant ChangeToWinner(Contestant contestant)
+        {
+            Winner winner = new Winner(contestant.firstName, contestant.lastName, contestant.eMailAddress, contestant.registrationNumber);
+            return winner;
+        }
+
+        public void AnnounceWinner(Contestant contestant)
+        {
+            foreach(var contestant1 in contestants)
+            {
+                contestant1.Value.Notify(contestant);
+            }
         }
 
     }

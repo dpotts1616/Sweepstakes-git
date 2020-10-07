@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    public static class UserInterface
+     static class UserInterface
     {
         //member variables
 
@@ -47,5 +47,6 @@ namespace Sweepstakes
         {
             Console.WriteLine(input);
         }
+
     }
 }

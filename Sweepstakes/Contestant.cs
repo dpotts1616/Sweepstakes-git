@@ -26,9 +26,10 @@ namespace Sweepstakes
 
         //methods
 
-        public void Notify(Contestant contestant)
+        public virtual void Notify(Contestant contestant)
         {
-            throw new NotImplementedException();
+            UserInterface.Print($"Congratulations to our winner of the Sweepstakes, " +
+                $"{contestant.firstName} {contestant.lastName}!!!");
         }
 
     }

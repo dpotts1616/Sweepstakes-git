@@ -11,6 +11,7 @@ namespace Sweepstakes
         //member variables
         MarketingFirmFactory factory = new MarketingFirmFactory();
 
+
         //constructor
 
         //methods
@@ -18,7 +19,16 @@ namespace Sweepstakes
         {
             int firmChoice = UserInterface.ChooseSweepstakeManagementType();
             MarketingFirm firm = factory.CreateAFirm(firmChoice);
-
+            //Sweepstakes sweepstakes1 = firm.CreateSweepstakes();
+            firm.CreateSweepstakes();
+            Sweepstakes sweepstakes1 = firm.GetSweepstakes();
+            sweepstakes1.RegisterContestant(new Contestant());
+            Contestant winner = sweepstakes1.PickWinner();
+            Console.ReadLine();
+            sweepstakes1.PrintContestantInfo(winner);
+            Console.ReadLine();
+            sweepstakes1.AnnounceWinner(winner);
+            Console.ReadLine();
 
         }
 

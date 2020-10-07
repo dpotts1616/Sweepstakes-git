@@ -23,6 +23,14 @@ namespace Sweepstakes
             registrationNumber = new Random().Next();
         }
 
+        public Contestant(string firstName, string lastName, string eMailAddress, int registrationNumber)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.eMailAddress = eMailAddress;
+            this.registrationNumber = registrationNumber;
+        }
+
 
         //methods
 

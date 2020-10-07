@@ -26,5 +26,10 @@ namespace Sweepstakes
         {
             _manager.InsertSweepstakes(new Sweepstakes(UserInterface.GetUserInputFor("What is the name of your Sweepstakes?")));
         }
+
+        public Sweepstakes GetSweepstakes()
+        {
+            return _manager.GetSweepstakes();
+        }
     }
 }

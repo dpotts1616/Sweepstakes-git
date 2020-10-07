@@ -14,6 +14,8 @@ namespace Sweepstakes
             Simulation simulation = new Simulation();
 
             simulation.RunSimulation();
+
+            Console.ReadLine();
            
         }
 

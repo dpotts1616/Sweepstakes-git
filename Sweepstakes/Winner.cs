@@ -9,13 +9,10 @@ namespace Sweepstakes
     class Winner : Contestant, INotifier
     {
         //member variables
-        public string firstName;
-        public string lastName;
-        public string eMailAddress;
-        public int registrationNumber;
 
         //constructor
         public Winner(string firstName, string lastName, string eMailAddress, int registrationNumber)
+            :base(firstName,lastName,eMailAddress,registrationNumber)
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -28,9 +25,9 @@ namespace Sweepstakes
 
         public override void Notify(Contestant contestant)
         {
-
-
-            UserInterface.Print($"Congratulations, you have won our sweepstakes!! Call 867-5309 to claim your prize.");
+            string subject = "Congratulations!!";
+            string body = $"Congratulations{firstName}, you have won our sweepstakes!! Call 867 - 5309 to claim your prize.";
+            SendMail.SendEmail(eMailAddress, subject, body);
         }
     }
 }

@@ -59,6 +59,7 @@
     <Compile Include="ISweepstakesManager.cs" />
     <Compile Include="MarketingFirm.cs" />
     <Compile Include="MarketingFirmFactory.cs" />
+    <Compile Include="PrivateInfo.cs" />
     <Compile Include="SendMail.cs" />
     <Compile Include="Simulation.cs" />
     <Compile Include="Program.cs" />

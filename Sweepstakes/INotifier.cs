@@ -8,6 +8,7 @@ namespace Sweepstakes
 {
     interface INotifier
     {
+        
         void Notify(Contestant contestant);
     }
 }

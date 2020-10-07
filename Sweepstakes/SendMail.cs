@@ -8,16 +8,13 @@ using System.Net.Mail;
 
 namespace Sweepstakes
 {
-    public class SendMail
+    public static class SendMail
     {
         static string smtpAddress = "smtp.gmail.com";
         static int portNumber = 587;
         static bool enableSSL = true;
         static string emailFromAddress = "dp5718259@gmail.com"; //Sender Email Address  
-        static string password = "devcodecamp2020"; //Sender Password  
-        //static string emailToAddress; //Receiver Email Address  
-        //static string subject = "Hello";
-        //static string body = "Hello, This is Email sending test using gmail.";
+    
 
 
 
@@ -25,7 +22,7 @@ namespace Sweepstakes
         {
             using (SmtpClient client = new SmtpClient(smtpAddress, portNumber))
             {
-                client.Credentials = new NetworkCredential(emailFromAddress, password);
+                client.Credentials = new NetworkCredential(emailFromAddress, PrivateInfo.emailPassword);
                 client.EnableSsl = enableSSL;
                 MailMessage eMail = new MailMessage(emailFromAddress, emailToAddress, subject, body);
                 client.Send(eMail);

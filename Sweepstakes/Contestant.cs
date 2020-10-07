@@ -36,8 +36,9 @@ namespace Sweepstakes
 
         public virtual void Notify(Contestant contestant)
         {
-            UserInterface.Print($"Congratulations to our winner of the Sweepstakes, " +
-                $"{contestant.firstName} {contestant.lastName}!!!");
+            string subject = "Sweepstakes Winner Announcement";
+            string body = $"Congratulations to our winner of the Sweepstakes, {contestant.firstName}!!!";
+            SendMail.SendEmail(eMailAddress, subject, body);
         }
 
     }
